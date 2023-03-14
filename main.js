@@ -552,6 +552,7 @@ function handlePublishDataset() {
         if (i > data.length) {
           clearInterval(interval);
           rsmInterval = rsmInterval.filter((item) => item.name !== name);
+          $("#stop-" + name).removeClass("stop-show");
         }
       }, 100);
       rsmInterval.push({ name, interval });
